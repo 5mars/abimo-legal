@@ -3,21 +3,178 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Abimo — Legal</title>
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 40px 20px; line-height: 1.6; color: #1c1c1e; }
-  h1 { font-size: 1.8em; }
-  a { color: #2563eb; }
-  @media (prefers-color-scheme: dark) { body { background: #111; color: #eee; } a { color: #7aa2ff; } }
-</style>
+<title>Abimo — Taste-test your business idea</title>
+<meta name="description" content="Say your idea out loud. Abimo transcribes it, has an AI critic score it, and hands you chapter one of a plan.">
+<meta property="og:title" content="Abimo — Taste-test your business idea">
+<meta property="og:description" content="One honest critic. One score out of 100. One next step.">
+<meta property="og:image" content="https://abimo.ca/img/waving.png">
+<link rel="icon" href="/img/neutral.png">
+<link rel="stylesheet" href="/style.css">
+<script>
+  // Opt into the animated (initially hidden) state only when motion is welcome,
+  // and give it up if the animation library never arrives — content must never stay hidden.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-anim');
+  setTimeout(function () { if (typeof anime !== 'function') document.documentElement.classList.remove('js-anim'); }, 2500);
+</script>
 </head>
-<body>
-<h1>Abimo</h1>
-<p>Abimo is a voice-note app that helps you capture startup ideas and get honest, AI-powered feedback on them.</p>
-<ul>
-  <li><a href="privacy/">Privacy Policy</a></li>
-  <li><a href="terms/">Terms of Use</a></li>
-</ul>
-<p>Contact: <a href="mailto:jeremy@cinqmars.ca">jeremy@cinqmars.ca</a></p>
+<body class="landing">
+<header>
+  <a class="brand" href="/">Abimo</a>
+  <nav><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="copy">
+      <span class="kicker">🍳 For the idea that's been rattling around for weeks</span>
+      <h1 id="headline"><span class="word">Say </span><span class="word">it </span><span class="word">out </span><span class="word">loud.</span><br><span class="word">Find </span><span class="word">out </span><span class="word">if </span><span class="word">it </span><span class="word">holds </span><span class="word">up.</span></h1>
+      <p class="sub">Record your business idea. One honest AI critic tastes it, scores it out of 100 with real market research, and hands you chapter one of a plan.</p>
+      <div class="cta-row">
+        <a class="btn primary" id="store-link" href="#plus">Coming to the App Store</a>
+        <a class="btn ghost" href="#how">How it works</a>
+      </div>
+    </div>
+    <div class="stage" aria-hidden="true">
+      <div class="puff teal"  style="width:18px;height:18px;left:12%;top:18%"></div>
+      <div class="puff amber" style="width:12px;height:12px;left:80%;top:12%"></div>
+      <div class="puff cream" style="width:26px;height:26px;left:70%;top:40%"></div>
+      <div class="puff teal"  style="width:10px;height:10px;left:22%;top:60%"></div>
+      <div class="puff amber" style="width:16px;height:16px;left:88%;top:62%"></div>
+      <div class="bubble" id="bubble" style="left:0;top:6%">Fine. Let's hear it.</div>
+      <div class="plate"></div>
+      <img class="horse" id="horse" src="/img/waving.png" alt="">
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="track" id="track">
+    <span>🎙️ Record it</span><span>🧑‍🍳 Get it tasted</span><span>📈 Score out of 100</span><span>🧾 Real market research</span><span>🗺️ Chapter one of a plan</span><span>🔥 Daily dares</span>
+    <span>🎙️ Record it</span><span>🧑‍🍳 Get it tasted</span><span>📈 Score out of 100</span><span>🧾 Real market research</span><span>🗺️ Chapter one of a plan</span><span>🔥 Daily dares</span>
+  </div></div>
+
+  <section class="block" id="how">
+    <h2 class="reveal">Three steps. One honest critic.</h2>
+    <p class="lede reveal">No forms, no templates, no “business plan generator”.</p>
+    <div class="steps landing-steps">
+      <div class="step"><span class="n">1</span><img src="/img/waving.png" alt=""><h3>Say it out loud</h3><p>Tap the mic and talk for a minute or five. Abimo transcribes it and files it in your Stable.</p></div>
+      <div class="step"><span class="n">2</span><img src="/img/cooking.png" alt=""><h3>Get it tasted</h3><p>About a minute later: a viability score, a verdict, strengths, weaknesses, opportunities, threats — with the evidence.</p></div>
+      <div class="step"><span class="n">3</span><img src="/img/writing.png" alt=""><h3>Cook chapter one</h3><p>Small steps sized for a real week. Check them off, log what you learned, keep the streak alive.</p></div>
+    </div>
+  </section>
+
+  <section class="block tasting" id="taste">
+    <div class="phone reveal" aria-hidden="true">
+      <div class="screen">
+        <div class="topbar"><span>9:41</span><span>Taste test</span></div>
+        <p class="card-title">Dog-walking marketplace for seniors</p>
+        <p class="card-sub">Tasted just now · 3 sources</p>
+        <div class="gauge">
+          <svg viewBox="0 0 190 190"><circle class="track" cx="95" cy="95" r="85"></circle><circle class="fill" id="gaugeFill" cx="95" cy="95" r="85"></circle></svg>
+          <div class="num"><span id="score">0</span><small>out of 100</small></div>
+        </div>
+        <p class="verdict" id="verdict">Needs seasoning — but there's a dish here.</p>
+        <div class="bars">
+          <div class="bar"><span>Demand</span><div class="rail"><i data-w="72" style="--w:72%"></i></div><b>7</b></div>
+          <div class="bar"><span>Differentiation</span><div class="rail"><i class="amber" data-w="40" style="--w:40%"></i></div><b>4</b></div>
+          <div class="bar"><span>Feasibility</span><div class="rail"><i class="sage" data-w="80" style="--w:80%"></i></div><b>8</b></div>
+          <div class="bar"><span>Timing</span><div class="rail"><i data-w="60" style="--w:60%"></i></div><b>6</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="text">
+      <h2 class="reveal">The score is harsh on purpose.</h2>
+      <p class="reveal">Most idea tools tell you what you want to hear. Abimo's critic scores against evidence and a deliberately tough scale, so a 60 actually means something.</p>
+      <ul>
+        <li class="reveal"><strong>Evidence first.</strong> Live web research on your market, competitors and pricing — every number has a receipt.</li>
+        <li class="reveal"><strong>Reasons you can act on.</strong> The bars tell you what would move the score, not just that it's low.</li>
+        <li class="reveal"><strong>Re-taste later.</strong> Do the work, come back, and watch the number move.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="plus reveal" id="plus">
+    <div>
+      <h2>Free, then Plus — the second chapter.</h2>
+      <p>The free Stable holds three ideas, each with a full tasting, the score breakdown and chapter one of its plan. No card required.</p>
+      <ul>
+        <li>Next chapters, built from what you learned</li>
+        <li>Re-taste after the work</li>
+        <li>The full evidence behind every score</li>
+        <li>Unlimited ideas, double the daily tastings</li>
+      </ul>
+      <span class="price">$4.99 / month · $34.99 / year · 7-day free trial</span>
+    </div>
+    <img src="/img/sunglasses.png" alt="">
+  </section>
+
+  <section class="faqish">
+    <details class="reveal"><summary>Is my idea safe with you?</summary><p>Your recordings, transcripts and analyses are yours. No ads, no tracking, no selling data. Delete an idea, or your whole account, from inside the app at any time. Details in the <a href="/privacy/">privacy policy</a>.</p></details>
+    <details class="reveal"><summary>Is this financial advice?</summary><p>No. It's one AI critic's evidence-backed opinion, meant to sharpen yours. Decisions stay yours.</p></details>
+    <details class="reveal"><summary>Which devices?</summary><p>iPhone, iOS 18 and later. English for now.</p></details>
+  </section>
+</main>
+<footer>
+  <a href="/support/">Support</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><a href="mailto:support@abimo.ca">support@abimo.ca</a>
+  <p>© 2026 Abimo. Made in Quebec, Canada.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" onerror="document.documentElement.classList.remove('js-anim')"></script>
+<script>
+(function () {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduce || typeof anime !== 'function') { document.documentElement.classList.remove('js-anim'); return; }
+
+  anime.timeline({ easing: 'easeOutExpo' })
+    .add({ targets: '.hero .word', opacity: [0, 1], translateY: [22, 0], rotate: [-3, 0], delay: anime.stagger(70), duration: 700 })
+    .add({ targets: '#horse', opacity: [0, 1], translateX: ['-50%', '-50%'], translateY: [60, 0], scale: [0.85, 1], duration: 800, easing: 'easeOutBack' }, '-=450')
+    .add({ targets: '#bubble', opacity: [0, 1], translateY: [10, 0], scale: [0.8, 1], duration: 500, easing: 'easeOutBack' }, '-=200')
+    .add({ targets: '.hero .puff', opacity: [0, 0.9], scale: [0, 1], delay: anime.stagger(80), duration: 500, easing: 'easeOutBack' }, '-=500');
+
+  // Idle: the horse breathes, the puffs drift, the bubble bobs
+  anime({ targets: '#horse', translateY: [0, -10], duration: 1800, direction: 'alternate', loop: true, easing: 'easeInOutSine', delay: 1600 });
+  document.querySelectorAll('.hero .puff').forEach((p, i) => {
+    anime({ targets: p, translateY: [0, -14 - i * 3], translateX: [0, (i % 2 ? 6 : -6)], duration: 2200 + i * 300, direction: 'alternate', loop: true, easing: 'easeInOutSine', delay: 1800 + i * 150 });
+  });
+  anime({ targets: '#bubble', rotate: [-1.5, 1.5], duration: 2600, direction: 'alternate', loop: true, easing: 'easeInOutSine', delay: 2000 });
+
+  // Marquee
+  const track = document.getElementById('track');
+  anime({ targets: track, translateX: ['0%', '-50%'], duration: 26000, loop: true, easing: 'linear' });
+
+  // Scroll reveals
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      if (e.target.classList.contains('step')) {
+        anime({ targets: e.target, opacity: [0, 1], translateY: [24, 0], duration: 700, easing: 'easeOutExpo', delay: [...e.target.parentNode.children].indexOf(e.target) * 120 });
+        anime({ targets: e.target.querySelector('img'), rotate: [-6, 0], scale: [0.9, 1], duration: 900, easing: 'easeOutBack', delay: 200 });
+      } else if (e.target.classList.contains('phone')) {
+        anime({ targets: e.target, opacity: [0, 1], translateY: [30, 0], rotate: [-2, 0], duration: 800, easing: 'easeOutExpo' });
+        runGauge();
+      } else {
+        anime({ targets: e.target, opacity: [0, 1], translateY: [18, 0], duration: 650, easing: 'easeOutExpo' });
+      }
+    });
+  }, { threshold: 0.25 });
+  document.querySelectorAll('.step, .reveal').forEach((el) => io.observe(el));
+
+  // The tasting: gauge counts to 62, bars fill, verdict lands
+  function runGauge() {
+    const target = 62;
+    const obj = { n: 0 };
+    anime({ targets: obj, n: target, round: 1, duration: 1800, easing: 'easeOutCubic', delay: 400,
+      update: () => { document.getElementById('score').textContent = obj.n; } });
+    anime({ targets: '#gaugeFill', strokeDashoffset: [534, 534 - 534 * target / 100], duration: 1800, easing: 'easeOutCubic', delay: 400 });
+    anime({ targets: '.bar .rail i', width: (el) => el.dataset.w + '%', duration: 1100, easing: 'easeOutExpo', delay: anime.stagger(140, { start: 900 }) });
+    anime({ targets: '#verdict', opacity: [0, 1], translateY: [8, 0], duration: 600, easing: 'easeOutExpo', delay: 2000 });
+  }
+
+  // Press-down on the primary button
+  document.querySelectorAll('.btn.primary').forEach((b) => {
+    b.addEventListener('mouseenter', () => anime({ targets: b, scale: 1.03, duration: 200, easing: 'easeOutQuad' }));
+    b.addEventListener('mouseleave', () => anime({ targets: b, scale: 1, duration: 200, easing: 'easeOutQuad' }));
+  });
+})();
+</script>
 </body>
 </html>

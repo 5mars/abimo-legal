@@ -4,55 +4,61 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Abimo — Privacy Policy</title>
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 40px 20px; line-height: 1.6; color: #1c1c1e; }
-  h1 { font-size: 1.8em; } h2 { font-size: 1.25em; margin-top: 1.8em; }
-  a { color: #2563eb; }
-  @media (prefers-color-scheme: dark) { body { background: #111; color: #eee; } a { color: #7aa2ff; } }
-</style>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
+<header>
+  <a class="brand" href="/">Abimo</a>
+  <nav><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+</header>
+<main>
 <h1>Abimo Privacy Policy</h1>
-<p><em>Last updated: July 8, 2026</em></p>
+<p><em class="date">Last updated: September 21, 2026</em></p>
 
-<p>Abimo ("the app", "we") is developed by Jeremy Cinq-Mars. This policy explains what data the app collects, why, and what happens to it.</p>
+<p>Abimo ("the app", "we") is an independent iOS app developed and operated by its developer, based in Quebec, Canada. This policy explains what data the app collects, why, where it goes, and how to get it deleted. The short version: your recordings and ideas are yours, we don't sell data, there are no ads, and there is no cross-app tracking.</p>
 
 <h2>What we collect</h2>
 <ul>
   <li><strong>Account information.</strong> Your email address and a password, used to create and sign in to your account.</li>
-  <li><strong>Voice recordings.</strong> The voice notes you record in the app, so they can be transcribed and analyzed.</li>
-  <li><strong>Transcriptions and analyses.</strong> The text transcribed from your recordings and the AI-generated analyses, scores, and action plans produced from them.</li>
-  <li><strong>Usage analytics.</strong> Anonymous-by-default product events (screens viewed, features used, purchases) and crash reports, linked to a random user identifier. We do not track you across other apps or websites, and we do not use advertising identifiers.</li>
+  <li><strong>Voice recordings.</strong> The voice notes you record in the app, so they can be transcribed and analysed.</li>
+  <li><strong>Transcripts, analyses and plans.</strong> The text transcribed from your recordings, the AI-generated analyses and scores, the action plans, and the notes you write when you complete a step.</li>
+  <li><strong>Subscription status.</strong> Whether your account has Abimo Plus, verified from the receipt Apple issues. We never see your payment details.</li>
+  <li><strong>Usage and diagnostics.</strong> Product events (screens viewed, features used, purchases started or completed) and crash reports, tied to a random user identifier and an app-instance identifier. No advertising identifier is used.</li>
 </ul>
 
 <h2>How your data is processed</h2>
 <ul>
-  <li>Recordings, transcriptions, and analyses are stored on <strong>Supabase</strong> (hosted in the United States). Recordings live in a private storage bucket accessible only to your account.</li>
-  <li>To transcribe and analyze your ideas, your recording and its transcription are sent to <strong>OpenAI</strong>'s API. OpenAI processes this data to produce the transcription and analysis and does not use API data to train its models.</li>
-  <li>Analytics and crash data are processed by <strong>Google Firebase</strong> (Analytics and Crashlytics).</li>
-  <li>Subscriptions are handled entirely by <strong>Apple</strong>. We never see your payment details.</li>
+  <li><strong>Storage — Supabase</strong> (United States). Your account, recordings, transcripts, analyses and plans are stored in a database and a private storage bucket that only your account can read.</li>
+  <li><strong>Transcription and analysis — OpenAI</strong> (United States). Your recording is sent to OpenAI's API to be transcribed; the transcript is then sent to produce the analysis, score and plan. To research the market for your idea, a short summary of the transcript is also used to run web searches through OpenAI's API. OpenAI does not use API data to train its models.</li>
+  <li><strong>Analytics and crash reporting — Google Firebase</strong> (Analytics and Crashlytics).</li>
+  <li><strong>Payments — Apple.</strong> Subscriptions are purchased and billed through your Apple ID.</li>
 </ul>
+<p>These providers process data only to deliver the service described here. Some of them are located outside Canada, which means your data may be subject to the laws of those jurisdictions while it is processed there.</p>
 
 <h2>What we don't do</h2>
 <ul>
-  <li>We don't sell your data.</li>
-  <li>We don't use your data for advertising or cross-app tracking.</li>
-  <li>We don't access your recordings except as needed to run the transcription and analysis you request.</li>
+  <li>We don't sell or rent your data.</li>
+  <li>We don't use your data for advertising or track you across other apps or websites.</li>
+  <li>We don't listen to your recordings except as needed to run the transcription and analysis you asked for, or to investigate a problem you reported.</li>
+  <li>We don't knowingly collect data from children under 13; Abimo is not directed at them.</li>
 </ul>
 
-<h2>Data retention and deletion</h2>
-<p>Your data is kept for as long as you have an account. You can delete individual ideas at any time, and you can delete your entire account from <strong>Settings → Delete Account</strong> inside the app. Account deletion removes your recordings, transcriptions, analyses, action plans, and account record from our servers.</p>
+<h2>Retention and deletion</h2>
+<p>Your data is kept for as long as you have an account. You can delete an individual idea at any time, and you can delete your whole account from <em>Settings → Delete Account</em> inside the app. Account deletion immediately removes your recordings, transcripts, analyses, plans and account record from our servers. Aggregated analytics that cannot identify you may be retained.</p>
 
 <h2>Your rights</h2>
-<p>You can request a copy of your data or ask us to delete it by emailing <a href="mailto:jeremy@cinqmars.ca">jeremy@cinqmars.ca</a>. If you are in the EU/EEA, UK, or a jurisdiction with similar data-protection laws (including Quebec's Law 25 and PIPEDA in Canada), you have the right to access, correct, export, and erase your personal data.</p>
-
-<h2>Children</h2>
-<p>Abimo is not directed at children under 13 and we do not knowingly collect data from them.</p>
+<p>You can access, correct, export or erase your personal information. Most of this you can do yourself inside the app; for anything else, email <a href="mailto:privacy@abimo.ca">privacy@abimo.ca</a>. If you are in Quebec, the rest of Canada, the EU/EEA, the UK or another jurisdiction with data-protection law, you have these rights under that law, and you may lodge a complaint with your local authority (in Quebec, the Commission d'accès à l'information).</p>
+<p>The person responsible for the protection of personal information at Abimo is the developer, reachable at <a href="mailto:privacy@abimo.ca">privacy@abimo.ca</a>.</p>
 
 <h2>Changes</h2>
-<p>If this policy changes materially, we'll update this page and note the new date at the top.</p>
+<p>If this policy changes materially, we'll update this page and the date at the top, and tell you in the app.</p>
 
 <h2>Contact</h2>
-<p>Jeremy Cinq-Mars — <a href="mailto:jeremy@cinqmars.ca">jeremy@cinqmars.ca</a></p>
+<p>Privacy: <a href="mailto:privacy@abimo.ca">privacy@abimo.ca</a> · Support: <a href="mailto:support@abimo.ca">support@abimo.ca</a></p>
+</main>
+<footer>
+  <a href="/support/">Support</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><a href="mailto:support@abimo.ca">support@abimo.ca</a>
+  <p>© 2026 Abimo. Made in Quebec, Canada.</p>
+</footer>
 </body>
 </html>
