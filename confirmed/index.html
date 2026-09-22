@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abimo — You're in</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/img/neutral.png">
+<link rel="stylesheet" href="/style.css">
+<script>
+  // Supabase appends session tokens (or an error) to the URL fragment after
+  // the verify step. This page never uses tokens — remember only whether an
+  // error came back, then drop the fragment before anything can read it.
+  var params = new URLSearchParams(location.hash.replace(/^#/, ""));
+  window.__confirmError = params.get("error_description") || params.get("error") || "";
+  if (location.hash) history.replaceState(null, "", location.pathname);
+</script>
+</head>
+<body>
+<header>
+  <a class="brand" href="/">Abimo</a>
+  <nav><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a></nav>
+</header>
+<main>
+  <section class="hero" style="grid-template-columns:1fr; text-align:center; padding-top:24px">
+    <img src="/img/thumbsUp.png" alt="" style="width:180px; margin:0 auto; display:block">
+    <h1 id="title">Email confirmed. Saddle up.</h1>
+    <p class="sub" id="sub" style="margin:0 auto 22px">Your Abimo account is ready. Open the app and sign in with the email and password you chose.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn primary" href="noteai://auth-callback">Open Abimo</a>
+    </div>
+    <p style="color:var(--muted); font-size:0.9em; margin-top:18px">Reading this on a computer? Nothing else to do here — pick up your phone and open the app.</p>
+  </section>
+</main>
+<footer>
+  <a href="/support/">Support</a><a href="/privacy/">Privacy Policy</a><a href="/terms/">Terms of Use</a><a href="mailto:support@abimo.ca">support@abimo.ca</a>
+  <p>© 2026 Abimo. Made in Quebec, Canada.</p>
+</footer>
+<script>
+  if (window.__confirmError) {
+    document.getElementById("title").textContent = "That link has gone stale.";
+    document.getElementById("sub").textContent = "Confirmation links expire after a day, and each one works once. Open Abimo, sign in, and if it still asks for confirmation, tap “Resend” — or write to support@abimo.ca.";
+  }
+</script>
+</body>
+</html>
